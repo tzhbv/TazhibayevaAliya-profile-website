@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +33,13 @@ Route::get('/contact', function () {
 Route::get('/home', function () {
     return view('index');
 });
+Route::get('post/create', function(){
+    DB::table('post')->insert([
+       'tittle' => 'Aliya Tazhibayeva',
+       'body' => 'Second course student of Suleyman Demirel University , major is IT.'
+    ]);
+});
+Route::get('post', function(){
+    $post=Post::find(1);
+    return $post->body;
+ });
