@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
+use App\Models\Post;
+
+use App\Http\Controllers\BlogController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +35,7 @@ Route::get('/contact', function () {
 Route::get('/home', function () {
     return view('index');
 });
-<<<<<<< HEAD
+
 
 Route::get('/post/create',function ()
 {
@@ -40,11 +45,6 @@ Route::get('/post/create',function ()
 	]);
 });
 
-Route::get('/post',function(){
-	$post = Post::find(1);
-	return $post->title;
-});
+Route::get('blog/index',[BlogController::class, 'index']);
 
 
-=======
->>>>>>> c971bc1a004cc17b13335db1c89013bb34374c97
