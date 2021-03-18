@@ -46,5 +46,4 @@ Route::get('/post',function(){
 });
 
 
-=======
->>>>>>> c971bc1a004cc17b13335db1c89013bb34374c97
+
