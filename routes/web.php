@@ -30,7 +30,6 @@ Route::get('/contact', function () {
 Route::get('/home', function () {
     return view('index');
 });
-<<<<<<< HEAD
 
 Route::get('/post/create',function ()
 {
